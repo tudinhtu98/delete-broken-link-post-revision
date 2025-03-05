@@ -1,0 +1,3 @@
+plugins:
+  delete_broken_link_post_revision_enable:
+    default: false
