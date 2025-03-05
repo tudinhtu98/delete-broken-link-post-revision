@@ -11,6 +11,7 @@ register_asset 'stylesheets/delete_broken_link_post_revision.scss'
 after_initialize do
     [
         '../app/controllers/delete_broken_link_post_revision_controller.rb',
+        '../app/jobs/scheduled/cleanup_broken_links.rb',
     ].each { |path| load File.expand_path(path, __FILE__) }
 
     Discourse::Application.routes.append do
