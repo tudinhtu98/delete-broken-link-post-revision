@@ -4,7 +4,7 @@ require 'net/http'
 
 module Jobs
   class CleanupBrokenLinks < ::Jobs::Scheduled
-    daily at: 1.hours # Runs daily at 1 AM
+    daily at: 7.hours # Runs daily at 7 AM GMT, meaning 1 AM CST timezone
 
     BATCH_SIZE = 100  # Number of posts per batch to optimize performance
     HTTP_TIMEOUT = 5  # Timeout in seconds for checking links
